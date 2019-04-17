@@ -1,0 +1,12 @@
+<!-- index.wxml -->
+<view style="height: 100rpx;flex-direction:column;">
+  <text class="message-text">城市：{{city}}</text>
+  <text class="message-text">省：{{province}}</text>
+  <text class="message-text">天气：{{realtime.weather}}</text>
+  <text class="message-text">温度：{{realtime.temp}}°C</text>
+  <text class="message-text">湿度：{{realtime.sD}}</text>
+  <text class="message-text">更新时间：{{realtime.time}} </text>
+  <text class="message-text">风向：{{realtime.wD}} </text>
+  <text class="message-text">风力：{{realtime.wS}} </text>
+  
+</view>

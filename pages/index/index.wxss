@@ -1,0 +1,11 @@
+page {
+    background: #F6F6F6;
+    position: relative;
+    padding-top: 50rpx;
+    color: #323233;
+}
+.message-text{
+    margin-left: 15rpx;
+    display: block;
+    margin-top: 50rpx;
+}
