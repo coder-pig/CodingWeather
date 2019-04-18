@@ -1,11 +1,36 @@
 page {
-    background: #F6F6F6;
-    position: relative;
-    padding-top: 50rpx;
-    color: #323233;
+  background: #f6f6f6;
+  position: relative;
+  padding-top: 50rpx;
+  color: #323233;
 }
-.message-text{
-    margin-left: 15rpx;
-    display: block;
-    margin-top: 50rpx;
+
+.user-icon-wrapper{
+  display:flex;                 
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center
+}
+
+.user-icon-image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+}
+
+.message-text {
+  margin-left: 15rpx;
+  display: block;
+  margin-top: 50rpx;
+}
+
+.indexes-text {
+  display: block;
+  margin-left: 15rpx;
+}
+
+.indexes-text-last{
+  display: block;
+  margin-left: 15rpx;
+  padding-bottom: 50rpx;
 }

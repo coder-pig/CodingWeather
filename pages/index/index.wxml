@@ -1,12 +1,28 @@
 <!-- index.wxml -->
+<block wx:if="{{!hasUserInfo && canIUse}}">
+  <view class="user-icon-wrapper">
+    <image class="user-icon-image" src="../../assets/codingboy.png" />
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="font-size: 20rpx">获取头像昵称</button>
+  </view>
+</block>
+<block wx:else>
+  <view class="user-icon-wrapper">
+    <image class="user-icon-image" src="{{userInfo.avatarUrl}}" mode="cover" />
+  </view>
+</block>
+<button style="margin-top: 50rpx">刷新天气</button>
 <view style="height: 100rpx;flex-direction:column;">
   <text class="message-text">城市：{{city}}</text>
   <text class="message-text">省：{{province}}</text>
   <text class="message-text">天气：{{realtime.weather}}</text>
   <text class="message-text">温度：{{realtime.temp}}°C</text>
   <text class="message-text">湿度：{{realtime.sD}}</text>
-  <text class="message-text">更新时间：{{realtime.time}} </text>
-  <text class="message-text">风向：{{realtime.wD}} </text>
-  <text class="message-text">风力：{{realtime.wS}} </text>
-  
+  <text class="message-text">更新时间：{{realtime.time}}</text>
+  <text class="message-text">风向：{{realtime.wD}}</text>
+  <text class="message-text">风力：{{realtime.wS}}</text>
+  <block wx:for="{{indexes}}" wx:for-item="item">
+    <text class="indexes-text">{{item.name}}：{{item.abbreviation}}</text>
+    <text class="indexes-text">{{item.content}}</text>
+    <text class="indexes-text-last">{{item.level}}</text>
+  </block>
 </view>
