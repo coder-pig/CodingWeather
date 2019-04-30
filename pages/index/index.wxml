@@ -1,4 +1,12 @@
 <!-- index.wxml -->
+<view  class="weather-main-wrapper">
+    <image src="../../assets/sunny.png" mode="widthFix"/>
+        <text class="temperature-text">{{weather.realtime.temp}}</text>
+        <text class="temperature-status-text">Snow</text>
+    <text class="temperature-o-text">o</text>
+    <text class="location-text">{{weather.city}}市</text>
+</view >
+
 <block wx:if="{{!hasUserInfo && canIUse}}">
     <view class="user-icon-wrapper">
         <image class="user-icon-image" src="../../assets/codingboy.png" mode="widthFix" />
@@ -15,17 +23,17 @@
 </block>
 <button style="margin-top: 50rpx" bindtap="refreshWeather">刷新天气</button>
 <view style="height: 100rpx;flex-direction:column;">
-  <text class="message-text">城市：{{weather.city}}</text>
-  <text class="message-text">省：{{weather.provinceName}}</text>
-  <text class="message-text">天气：{{weather.realtime.weather}}</text>
-  <text class="message-text">温度：{{weather.realtime.temp}}°C</text>
-  <text class="message-text">湿度：{{weather.realtime.sD}}</text>
-  <text class="message-text">更新时间：{{weather.realtime.time}}</text>
-  <text class="message-text">风向：{{weather.realtime.wD}}</text>
-  <text class="message-text">风力：{{weather.realtime.wS}}</text>
-  <block wx:for="{{weather.indexes}}" wx:for-item="item" wx:key="key">
-    <text class="indexes-text">{{item.name}}：{{item.abbreviation}}</text>
-    <text class="indexes-text">{{item.content}}</text>
-    <text class="indexes-text-last">{{item.level}}</text>
-  </block>
+    <text class="message-text">城市：{{weather.city}}</text>
+    <text class="message-text">省：{{weather.provinceName}}</text>
+    <text class="message-text">天气：{{weather.realtime.weather}}</text>
+    <text class="message-text">温度：{{weather.realtime.temp}}°C</text>
+    <text class="message-text">湿度：{{weather.realtime.sD}}</text>
+    <text class="message-text">更新时间：{{weather.realtime.time}}</text>
+    <text class="message-text">风向：{{weather.realtime.wD}}</text>
+    <text class="message-text">风力：{{weather.realtime.wS}}</text>
+    <block wx:for="{{weather.indexes}}" wx:for-item="item" wx:key="key">
+        <text class="indexes-text">{{item.name}}：{{item.abbreviation}}</text>
+        <text class="indexes-text">{{item.content}}</text>
+        <text class="indexes-text-last">{{item.level}}</text>
+    </block>
 </view>

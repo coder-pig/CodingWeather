@@ -1,27 +1,76 @@
 page {
   background: #f6f6f6;
   position: relative;
-  padding-top: 30rpx;
   color: #323233;
 }
 
-.user-icon-wrapper{
-  display:flex;                 
-  justify-content: center; 
+.weather-main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-main-wrapper image {
+  width: 100%;
+  border-radius: 15rpx;
+  margin: 20rpx;
+}
+
+.temperature-text {
+  font-size: 122rpx;
+  position: absolute;
+  right: 66rpx;
+  top: 30rpx;
+  color: white;
+  
+}
+
+
+.temperature-o-text {
+  font-size: 32rpx;
+  position: absolute;
+  right: 42rpx;
+  top: 48rpx;
+  color: white;
+  font-weight: bold
+}
+
+.temperature-status-text {
+  font-size: 48rpx;
+  position: absolute;
+  right: 52rpx;
+  top: 152rpx;
+  color: white;
+  font-weight: bold
+}
+
+.location-text {
+  font-size: 32rpx;
+  position: absolute;
+  left: 42rpx;
+  top: 250rpx;
+  color: white;
+}
+
+
+
+
+.user-icon-wrapper {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center
-} 
+}
 
-.user-icon-image{ 
+.user-icon-image {
   width: 150rpx;
   border-radius: 20rpx;
 }
 
-.authorize-button{
+.authorize-button {
   margin-top: 30rpx;
 }
 
-.nickname-text{
+.nickname-text {
   margin-top: 30rpx;
 }
 
@@ -31,13 +80,12 @@ page {
   margin-top: 50rpx;
 }
 
-
 .indexes-text {
   display: block;
   margin-left: 15rpx;
 }
 
-.indexes-text-last{
+.indexes-text-last {
   display: block;
   margin-left: 15rpx;
   padding-bottom: 50rpx;
